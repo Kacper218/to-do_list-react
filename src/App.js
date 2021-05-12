@@ -10,7 +10,7 @@ let tasks = [
   { id: 1, content: "Przejśc na reacta", done: true },
   { id: 2, content: "zjeść obiad", done: false },
 ];
-let hideDoneTasks = false;
+let hideDone = false;
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
 
       <Section body={
         <>
-          <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
-          <List tasks={tasks} hideDoneTasks={hideDoneTasks} />
+          <Buttons tasks={tasks} hideDone={hideDone} />
+          <List tasks={tasks} hideDone={hideDone} />
         </>
       }
       />

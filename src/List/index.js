@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css";
 
-const List = ({tasks, hideDoneTasks}) => (
+const List = ({tasks, hideDone}) => (
   <ul className="list">
     {tasks.map(task => (
-      <span className={`list__item${task.done && hideDoneTasks ? " list__item--hidden" : ""}`}>
+      <span className={`list__item${task.done && hideDone ? " list__item--hidden" : ""}`}>
         <button className="list__buttonToggle">
         {task.done ? "✔" : ""}
         </button>
