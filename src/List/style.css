@@ -52,7 +52,7 @@
     text-align: center;
 }
 
-.list-text--done {
+.list__text--done {
     text-decoration: line-through;
 }
 
