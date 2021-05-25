@@ -20,9 +20,7 @@ const List = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         <button
           className="list__buttonRemove"
           onClick={() => removeTask(task.id)}
-        >
-          🗑
-          ️</button>
+        >🗑</button>
       </span>
     ))}
   </ul>
