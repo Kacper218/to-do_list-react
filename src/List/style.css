@@ -34,7 +34,6 @@
 }
 
 .list__buttonToggle {
-    grid-column: 1 / 2;
     background-color: rgb(2, 161, 2);
     padding: 0;
     color: white;
@@ -62,7 +61,6 @@
 }
 
 .list__buttonRemove {
-    grid-column: 3 / 4;
     background-color: rgb(255, 102, 102);
     color: white;
     padding: 0;
