@@ -13,8 +13,7 @@ const List = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         </button>
         <li
           key={task.id}
-          className={`"list__text 
-        ${task.done ? "list__text--done" : ""}"`}
+          className={`list__text ${task.done ? "list__text--done" : ""}`}
         >
           {task.content}
         </li>
