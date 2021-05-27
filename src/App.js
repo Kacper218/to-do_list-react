@@ -8,10 +8,14 @@ import Container from './Container'
 
 function App() {
 
-  const tasksFromStorage = JSON.parse(localStorage.getItem("tasks"));
+  const tasksFromLocalStorage = localStorage.getItem("tasks");
 
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([...tasksFromStorage]);
+  const [tasks, setTasks] = useState(
+    tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : []
+  );
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
