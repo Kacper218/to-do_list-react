@@ -1,33 +1,35 @@
 import React from 'react';
-import "./style.css";
+import { ButtonsContainer, ButtonsHeader, Button } from "./styled";
 
-const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone}) => {
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
   if (tasks.length === 0) {
     return (
-      <div className="buttons__container">
-        <h2 className="section__header">Lista zadań</h2>
-        <button className="buttons__button--none" disabled></button>
-        <button className="buttons__button--none" disabled></button>
-      </div>
+      <ButtonsContainer>
+        <ButtonsHeader>
+          Lista zadań
+        </ButtonsHeader>
+        <Button none disabled></Button>
+        <Button none disabled></Button>
+      </ButtonsContainer>
     )
   }
   return (
-    <div className="buttons__container">
-      <h2 className="section__header">Lista zadań</h2>
-      <button
+    <ButtonsContainer>
+      <ButtonsHeader>
+        Lista zadań
+        </ButtonsHeader>
+      <Button
         onClick={toggleHideDone}
-        className="buttons__button"
       >
         {hideDone ? "Pokaż" : "Ukryj"} ukończone
-        </button>
-      <button
-        className="buttons__button"
+      </Button>
+      <Button
         disabled={tasks.every(({ done }) => done)}
         onClick={setAllDone}
       >
         Ukończ wszystkie
-          </button>
-    </div>
+      </Button>
+    </ButtonsContainer>
   )
 };
 
