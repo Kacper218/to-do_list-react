@@ -1,32 +1,34 @@
 import React from 'react';
-import "./style.css";
+import { TasksList, ListItem, Content, Button } from "./styled";
 
 const List = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-  <ul className="list">
+  <TasksList>
     {tasks.map(task => (
       <li
-      key={task.id}
+        key={task.id}
       >
-        <span className={`list__item ${task.done && hideDone ? " list__item--hidden" : ""}`}>
-          <button
-            className="list__buttonToggle"
+        <ListItem
+          hidden={task.done && hideDone}
+        >
+          <Button
+            toggleTaskDone
             onClick={() => toggleTaskDone(task.id)}
           >
             {task.done ? "✔" : ""}
-          </button>
-          <span
-            className={`list__text ${task.done ? "list__text--done" : ""}`}
+          </Button>
+          <Content
+            done={task.done}
           >
             {task.content}
-          </span>
-          <button
-            className="list__buttonRemove"
+          </Content>
+          <Button
+            remove
             onClick={() => removeTask(task.id)}
-          >🗑</button>
-        </span>
+          >🗑</Button>
+        </ListItem>
       </li>
     ))}
-  </ul>
+  </TasksList>
 
 );
 
