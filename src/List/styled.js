@@ -51,14 +51,24 @@ export const Button = styled.button`
     border: none;
     height: 35px;
     width: 40px;
+    transition: 1s;
+
 
     ${({ toggleTaskDone }) => toggleTaskDone && css`
         background-color: rgb(2, 161, 2);
         font-size: xx-large;
+
+        &:hover {
+            background-color: hsl(120, 97%, 40%);
+        }
     `}
 
     ${({ remove }) => remove && css`
         background-color: rgb(255, 102, 102);
         font-size: x-large;
+
+        &:hover {
+            background-color: hsl(0, 100%, 80%);
+        }
     `}
 `;
