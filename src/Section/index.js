@@ -1,23 +1,25 @@
 import React from 'react';
-import "./style.css";
+import { SectionContainer, SectionHeader} from "./styled"
 
 const Section = ({ extraTitle, body }) => {
   if (extraTitle) {
     return (
-      <section className="section">
-        <h2 className="section__header">{extraTitle}</h2>
-        <div className="section__body">
+      <SectionContainer>
+        <SectionHeader>
+          {extraTitle}
+        </SectionHeader>
+        <div>
           {body}
         </div>
-      </section>
+      </SectionContainer>
     )
   }
   return (
-      <section className="section">
-        <div className="section__body">
-          {body}
-        </div>
-      </section>
+    <SectionContainer>
+      <div>
+        {body}
+      </div>
+    </SectionContainer>
   )
 };
 
