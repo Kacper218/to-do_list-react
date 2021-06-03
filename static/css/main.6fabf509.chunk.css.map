@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACI,qBACJ,CAEA,iBAGI,kBACJ,CAEA,KACI,qBAAsB,CACtB,6BACJ","file":"main.6fabf509.chunk.css","sourcesContent":["html {\n    box-sizing: border-box;\n}\n\n*,\n::after,\n::before {\n    box-sizing: inherit;\n}\n\nbody {\n    background-color: #ccc;\n    font-family: 'Lato', sans-serif;\n}"]}
